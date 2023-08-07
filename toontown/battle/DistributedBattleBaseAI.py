@@ -307,7 +307,7 @@ class DistributedBattleBaseAI(DistributedObjectAI.DistributedObjectAI, BattleBas
 
     def d_setMovie(self):
         self.notify.debug('network:setMovie()')
-        self.sendUpdate('setMovie', self.getMovie())
+        #self.sendUpdate('setMovie', self.getMovie())
         self.__updateEncounteredCogs()
 
     def getMovie(self):
@@ -1184,7 +1184,7 @@ class DistributedBattleBaseAI(DistributedObjectAI.DistributedObjectAI, BattleBas
             if self.toonAttacks[t][TOON_TRACK_COL] != NO_ATTACK:
                 self.addHelpfulToon(t)
 
-        self.battleCalc.calculateRound()
+        #self.battleCalc.calculateRound()
         for t in self.activeToons:
             self.sendEarnedExperience(t)
             toon = self.getToon(t)
